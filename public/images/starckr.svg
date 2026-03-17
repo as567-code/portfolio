@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1222"/>
+      <stop offset="100%" stop-color="#0a0e1a"/>
+    </linearGradient>
+    <linearGradient id="ts-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="g1"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+  <rect width="480" height="300" fill="url(#bg)" rx="12"/>
+  <circle cx="240" cy="150" r="120" fill="#5eead4" opacity="0.02" filter="url(#g1)"/>
+
+  <!-- Title -->
+  <text x="30" y="36" font-family="'Inter',system-ui,sans-serif" font-size="11" fill="#5eead4" font-weight="600" letter-spacing="2">STARCKR</text>
+  <text x="30" y="52" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#475569">Production-Ready Full-Stack TypeScript Starter · Auth · RBAC · Tested</text>
+
+  <!-- Left: Architecture -->
+  <rect x="20" y="66" width="196" height="190" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="118" y="82" font-family="'SF Mono',monospace" font-size="9" fill="#5eead4" text-anchor="middle" font-weight="600">STACK ARCHITECTURE</text>
+
+  <!-- Frontend -->
+  <rect x="30" y="92" width="176" height="28" rx="5" fill="#1e293b" stroke="#3b82f6" stroke-width="0.8"/>
+  <text x="118" y="104" font-family="'SF Mono',monospace" font-size="8" fill="#93c5fd" text-anchor="middle" font-weight="600">Frontend</text>
+  <text x="118" y="115" font-family="'SF Mono',monospace" font-size="7" fill="#3b82f6" text-anchor="middle">React · TailwindCSS · Dark Mode</text>
+
+  <line x1="118" y1="120" x2="118" y2="128" stroke="#334155" stroke-width="0.8"/>
+  <path d="M115 126 L118 132 L121 126" fill="#334155"/>
+
+  <!-- Auth -->
+  <rect x="30" y="132" width="176" height="28" rx="5" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.8"/>
+  <text x="118" y="144" font-family="'SF Mono',monospace" font-size="8" fill="#a5b4fc" text-anchor="middle" font-weight="600">Auth System</text>
+  <text x="118" y="155" font-family="'SF Mono',monospace" font-size="7" fill="#6366f1" text-anchor="middle">JWT · Sessions · OAuth · bcrypt</text>
+
+  <line x1="118" y1="160" x2="118" y2="168" stroke="#334155" stroke-width="0.8"/>
+  <path d="M115 166 L118 172 L121 166" fill="#334155"/>
+
+  <!-- RBAC -->
+  <rect x="30" y="172" width="176" height="28" rx="5" fill="#064e3b" stroke="#5eead4" stroke-width="0.8"/>
+  <text x="118" y="184" font-family="'SF Mono',monospace" font-size="8" fill="#5eead4" text-anchor="middle" font-weight="600">RBAC Engine</text>
+  <text x="118" y="195" font-family="'SF Mono',monospace" font-size="7" fill="#5eead4" text-anchor="middle" opacity="0.8">Admin · Editor · Viewer · Custom</text>
+
+  <line x1="118" y1="200" x2="118" y2="208" stroke="#334155" stroke-width="0.8"/>
+  <path d="M115 206 L118 212 L121 206" fill="#334155"/>
+
+  <!-- DB -->
+  <rect x="30" y="212" width="176" height="28" rx="5" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+  <text x="118" y="224" font-family="'SF Mono',monospace" font-size="8" fill="#94a3b8" text-anchor="middle" font-weight="600">Data Layer</text>
+  <text x="118" y="235" font-family="'SF Mono',monospace" font-size="7" fill="#64748b" text-anchor="middle">PostgreSQL · Prisma ORM · Migrations</text>
+
+  <!-- Right: Features -->
+  <rect x="230" y="66" width="230" height="190" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="345" y="82" font-family="'SF Mono',monospace" font-size="9" fill="#5eead4" text-anchor="middle" font-weight="600">FEATURES</text>
+
+  <!-- Auth features -->
+  <rect x="240" y="92" width="104" height="72" rx="5" fill="#1e293b" stroke="#6366f1" stroke-width="0.7"/>
+  <text x="292" y="106" font-family="'SF Mono',monospace" font-size="7.5" fill="#a5b4fc" text-anchor="middle" font-weight="600">Authentication</text>
+  <text x="248" y="118" font-family="'SF Mono',monospace" font-size="6.5" fill="#5eead4">JWT tokens</text>
+  <text x="248" y="129" font-family="'SF Mono',monospace" font-size="6.5" fill="#5eead4">Refresh rotation</text>
+  <text x="248" y="140" font-family="'SF Mono',monospace" font-size="6.5" fill="#5eead4">Rate limiting</text>
+  <text x="248" y="151" font-family="'SF Mono',monospace" font-size="6.5" fill="#5eead4">Password hashing</text>
+
+  <!-- RBAC features -->
+  <rect x="352" y="92" width="100" height="72" rx="5" fill="#1e293b" stroke="#5eead4" stroke-width="0.7"/>
+  <text x="402" y="106" font-family="'SF Mono',monospace" font-size="7.5" fill="#5eead4" text-anchor="middle" font-weight="600">RBAC</text>
+  <text x="360" y="118" font-family="'SF Mono',monospace" font-size="6.5" fill="#a5b4fc">Role hierarchy</text>
+  <text x="360" y="129" font-family="'SF Mono',monospace" font-size="6.5" fill="#a5b4fc">Permissions</text>
+  <text x="360" y="140" font-family="'SF Mono',monospace" font-size="6.5" fill="#a5b4fc">Route guards</text>
+  <text x="360" y="151" font-family="'SF Mono',monospace" font-size="6.5" fill="#a5b4fc">API middleware</text>
+
+  <!-- UI features -->
+  <rect x="240" y="172" width="104" height="72" rx="5" fill="#1e293b" stroke="#334155" stroke-width="0.7"/>
+  <text x="292" y="186" font-family="'SF Mono',monospace" font-size="7.5" fill="#94a3b8" text-anchor="middle" font-weight="600">Dark Mode UI</text>
+  <text x="248" y="198" font-family="'SF Mono',monospace" font-size="6.5" fill="#60a5fa">System theme</text>
+  <text x="248" y="209" font-family="'SF Mono',monospace" font-size="6.5" fill="#60a5fa">Tailwind CSS</text>
+  <text x="248" y="220" font-family="'SF Mono',monospace" font-size="6.5" fill="#60a5fa">shadcn/ui</text>
+  <text x="248" y="231" font-family="'SF Mono',monospace" font-size="6.5" fill="#60a5fa">Responsive</text>
+
+  <!-- Test features -->
+  <rect x="352" y="172" width="100" height="72" rx="5" fill="#1e293b" stroke="#334155" stroke-width="0.7"/>
+  <text x="402" y="186" font-family="'SF Mono',monospace" font-size="7.5" fill="#94a3b8" text-anchor="middle" font-weight="600">Testing</text>
+  <text x="360" y="198" font-family="'SF Mono',monospace" font-size="6.5" fill="#fbbf24">Vitest unit tests</text>
+  <text x="360" y="209" font-family="'SF Mono',monospace" font-size="6.5" fill="#fbbf24">Integration tests</text>
+  <text x="360" y="220" font-family="'SF Mono',monospace" font-size="6.5" fill="#fbbf24">CI/CD pipeline</text>
+  <text x="360" y="231" font-family="'SF Mono',monospace" font-size="6.5" fill="#fbbf24">Type-safe</text>
+
+  <!-- Bottom badges -->
+  <rect x="20" y="268" width="80" height="16" rx="4" fill="url(#ts-grad)"/>
+  <text x="60" y="279" font-family="'SF Mono',monospace" font-size="8" fill="white" text-anchor="middle" font-weight="700">TypeScript</text>
+  <rect x="106" y="268" width="72" height="16" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.6"/>
+  <text x="142" y="279" font-family="'SF Mono',monospace" font-size="7" fill="#94a3b8" text-anchor="middle">PostgreSQL</text>
+  <rect x="184" y="268" width="52" height="16" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.6"/>
+  <text x="210" y="279" font-family="'SF Mono',monospace" font-size="7" fill="#94a3b8" text-anchor="middle">Prisma</text>
+  <rect x="242" y="268" width="52" height="16" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.6"/>
+  <text x="268" y="279" font-family="'SF Mono',monospace" font-size="7" fill="#94a3b8" text-anchor="middle">Vitest</text>
+  <rect x="300" y="268" width="100" height="16" rx="4" fill="#052e16" stroke="#16a34a" stroke-width="0.6"/>
+  <text x="350" y="279" font-family="'SF Mono',monospace" font-size="7" fill="#4ade80" text-anchor="middle">Production-Ready</text>
+</svg>

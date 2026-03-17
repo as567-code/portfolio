@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1222"/>
+      <stop offset="100%" stop-color="#0a0e1a"/>
+    </linearGradient>
+    <filter id="g1"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+  <rect width="480" height="300" fill="url(#bg)" rx="12"/>
+  <circle cx="100" cy="120" r="100" fill="#6366f1" opacity="0.03" filter="url(#g1)"/>
+
+  <!-- Title -->
+  <text x="30" y="36" font-family="'Inter',system-ui,sans-serif" font-size="11" fill="#5eead4" font-weight="600" letter-spacing="2">MUSIC SOURCE CLASSIFIER</text>
+  <text x="30" y="52" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#475569">AI vs Human Music Detector · CNN + FAISS · Top-K Similarity Search</text>
+
+  <!-- Left: Mel Spectrogram -->
+  <rect x="20" y="66" width="148" height="90" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="30" y="80" font-family="'SF Mono',monospace" font-size="7.5" fill="#475569">MEL SPECTROGRAM</text>
+
+  <!-- Spectrogram bars -->
+  <g opacity="0.85">
+    <rect x="26" y="114" width="6" height="24" rx="1" fill="#6366f1"/>
+    <rect x="34" y="108" width="6" height="30" rx="1" fill="#7c3aed"/>
+    <rect x="42" y="104" width="6" height="34" rx="1" fill="#5eead4"/>
+    <rect x="50" y="112" width="6" height="26" rx="1" fill="#6366f1"/>
+    <rect x="58" y="106" width="6" height="32" rx="1" fill="#0ea5e9"/>
+    <rect x="66" y="110" width="6" height="28" rx="1" fill="#5eead4"/>
+    <rect x="74" y="102" width="6" height="36" rx="1" fill="#6366f1"/>
+    <rect x="82" y="108" width="6" height="30" rx="1" fill="#7c3aed"/>
+    <rect x="90" y="114" width="6" height="24" rx="1" fill="#5eead4"/>
+    <rect x="98" y="104" width="6" height="34" rx="1" fill="#0ea5e9"/>
+    <rect x="106" y="110" width="6" height="28" rx="1" fill="#6366f1"/>
+    <rect x="114" y="103" width="6" height="35" rx="1" fill="#5eead4"/>
+    <rect x="122" y="108" width="6" height="30" rx="1" fill="#7c3aed"/>
+    <rect x="130" y="116" width="6" height="22" rx="1" fill="#6366f1"/>
+    <rect x="138" y="106" width="6" height="32" rx="1" fill="#5eead4"/>
+    <rect x="146" y="112" width="6" height="26" rx="1" fill="#0ea5e9"/>
+    <rect x="154" y="104" width="6" height="34" rx="1" fill="#6366f1"/>
+    <!-- Mid freq (shorter, transparent) -->
+    <rect x="26" y="96" width="6" height="16" rx="1" fill="#5eead4" opacity="0.5"/>
+    <rect x="42" y="92" width="6" height="10" rx="1" fill="#6366f1" opacity="0.5"/>
+    <rect x="58" y="94" width="6" height="10" rx="1" fill="#5eead4" opacity="0.4"/>
+    <rect x="74" y="88" width="6" height="12" rx="1" fill="#6366f1" opacity="0.6"/>
+    <rect x="90" y="96" width="6" height="16" rx="1" fill="#7c3aed" opacity="0.4"/>
+    <rect x="106" y="92" width="6" height="16" rx="1" fill="#5eead4" opacity="0.5"/>
+    <rect x="122" y="90" width="6" height="16" rx="1" fill="#6366f1" opacity="0.5"/>
+    <rect x="138" y="88" width="6" height="16" rx="1" fill="#5eead4" opacity="0.5"/>
+    <rect x="154" y="90" width="6" height="12" rx="1" fill="#0ea5e9" opacity="0.4"/>
+  </g>
+  <text x="30" y="150" font-family="'SF Mono',monospace" font-size="6.5" fill="#475569">freq ↑  time →</text>
+
+  <!-- Arrow -->
+  <line x1="170" y1="110" x2="186" y2="110" stroke="#5eead4" stroke-width="1.2" opacity="0.6"/>
+  <path d="M184 107 L190 110 L184 113" fill="#5eead4" opacity="0.6"/>
+
+  <!-- CNN Architecture -->
+  <rect x="192" y="66" width="120" height="90" rx="8" fill="#0f172a" stroke="#6366f1" stroke-width="1"/>
+  <text x="252" y="80" font-family="'SF Mono',monospace" font-size="8" fill="#a5b4fc" text-anchor="middle" font-weight="600">AudioCNN</text>
+
+  <rect x="202" y="86" width="100" height="12" rx="3" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.6"/>
+  <text x="252" y="95" font-family="'SF Mono',monospace" font-size="6.5" fill="#a5b4fc" text-anchor="middle">Conv2D (32) + ReLU</text>
+
+  <rect x="202" y="102" width="100" height="12" rx="3" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.6"/>
+  <text x="252" y="111" font-family="'SF Mono',monospace" font-size="6.5" fill="#a5b4fc" text-anchor="middle">Conv2D (64) + MaxPool</text>
+
+  <rect x="202" y="118" width="100" height="12" rx="3" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.6"/>
+  <text x="252" y="127" font-family="'SF Mono',monospace" font-size="6.5" fill="#a5b4fc" text-anchor="middle">Conv2D (128) + BN</text>
+
+  <rect x="202" y="134" width="100" height="12" rx="3" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.6"/>
+  <text x="252" y="143" font-family="'SF Mono',monospace" font-size="6.5" fill="#a5b4fc" text-anchor="middle">FC → 2-class</text>
+
+  <!-- Arrow -->
+  <line x1="314" y1="110" x2="330" y2="110" stroke="#5eead4" stroke-width="1.2" opacity="0.6"/>
+  <path d="M328 107 L334 110 L328 113" fill="#5eead4" opacity="0.6"/>
+
+  <!-- Verdict -->
+  <rect x="336" y="66" width="124" height="90" rx="8" fill="#0f172a" stroke="#5eead4" stroke-width="1"/>
+  <text x="398" y="80" font-family="'SF Mono',monospace" font-size="8" fill="#5eead4" text-anchor="middle" font-weight="600">VERDICT</text>
+
+  <rect x="346" y="86" width="104" height="22" rx="4" fill="#052e16" stroke="#16a34a" stroke-width="0.8"/>
+  <text x="398" y="96" font-family="'SF Mono',monospace" font-size="8" fill="#4ade80" text-anchor="middle">AI-Generated</text>
+  <text x="398" y="105" font-family="'SF Mono',monospace" font-size="7" fill="#166534" text-anchor="middle">conf: 0.94</text>
+
+  <!-- Confidence bar -->
+  <rect x="346" y="114" width="104" height="6" rx="3" fill="#1e293b"/>
+  <rect x="346" y="114" width="98" height="6" rx="3" fill="#5eead4" opacity="0.7"/>
+
+  <!-- FAISS -->
+  <rect x="346" y="126" width="104" height="22" rx="4" fill="#1e1b4b" stroke="#a78bfa" stroke-width="0.7"/>
+  <text x="398" y="136" font-family="'SF Mono',monospace" font-size="7.5" fill="#a5b4fc" text-anchor="middle">FAISS Top-K</text>
+  <text x="398" y="146" font-family="'SF Mono',monospace" font-size="6.5" fill="#6366f1" text-anchor="middle">similar human tracks</text>
+
+  <!-- Bottom: Similar tracks -->
+  <rect x="20" y="166" width="440" height="68" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="30" y="182" font-family="'SF Mono',monospace" font-size="8" fill="#a5b4fc" font-weight="600">Top-K Similar Human Tracks (FAISS + TorchOpenL3)</text>
+
+  <rect x="30" y="188" width="130" height="36" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.7"/>
+  <text x="40" y="200" font-family="'SF Mono',monospace" font-size="7" fill="#94a3b8">Jazz in Paris</text>
+  <rect x="40" y="206" width="90" height="4" rx="2" fill="#1e293b"/><rect x="40" y="206" width="82" height="4" rx="2" fill="#5eead4" opacity="0.7"/>
+  <text x="40" y="218" font-family="'SF Mono',monospace" font-size="6.5" fill="#475569">sim: 0.91</text>
+
+  <rect x="170" y="188" width="130" height="36" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.7"/>
+  <text x="180" y="200" font-family="'SF Mono',monospace" font-size="7" fill="#94a3b8">Midnight Groove</text>
+  <rect x="180" y="206" width="90" height="4" rx="2" fill="#1e293b"/><rect x="180" y="206" width="68" height="4" rx="2" fill="#a78bfa" opacity="0.7"/>
+  <text x="180" y="218" font-family="'SF Mono',monospace" font-size="6.5" fill="#475569">sim: 0.87</text>
+
+  <rect x="310" y="188" width="130" height="36" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.7"/>
+  <text x="320" y="200" font-family="'SF Mono',monospace" font-size="7" fill="#94a3b8">Electric Dreams</text>
+  <rect x="320" y="206" width="90" height="4" rx="2" fill="#1e293b"/><rect x="320" y="206" width="56" height="4" rx="2" fill="#fbbf24" opacity="0.7"/>
+  <text x="320" y="218" font-family="'SF Mono',monospace" font-size="6.5" fill="#475569">sim: 0.83</text>
+
+  <!-- Datasets -->
+  <text x="30" y="248" font-family="'SF Mono',monospace" font-size="7.5" fill="#475569">Datasets: GTZAN (human) · SONICS (AI-generated)</text>
+
+  <text x="30" y="286" font-family="'SF Mono',monospace" font-size="8" fill="#334155">CNN · Mel Spectrogram · FAISS · PyTorch · Flask · React</text>
+</svg>

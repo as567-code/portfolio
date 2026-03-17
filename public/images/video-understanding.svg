@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1222"/>
+      <stop offset="100%" stop-color="#0a0e1a"/>
+    </linearGradient>
+    <filter id="g1"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+  <rect width="480" height="300" fill="url(#bg)" rx="12"/>
+  <circle cx="200" cy="140" r="110" fill="#6366f1" opacity="0.03" filter="url(#g1)"/>
+
+  <!-- Title -->
+  <text x="30" y="36" font-family="'Inter',system-ui,sans-serif" font-size="11" fill="#5eead4" font-weight="600" letter-spacing="2">VIDEO UNDERSTANDING CHAT</text>
+  <text x="30" y="52" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#475569">Multi-modal AI · Video Analysis · Conversational Interface</text>
+
+  <!-- Left: Video frames -->
+  <rect x="20" y="66" width="180" height="120" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="30" y="82" font-family="'SF Mono',monospace" font-size="7.5" fill="#475569">VIDEO INPUT</text>
+
+  <!-- Frame thumbnails -->
+  <rect x="30" y="88" width="48" height="34" rx="4" fill="#1e293b" stroke="#5eead4" stroke-width="1"/>
+  <text x="54" y="103" font-family="'SF Mono',monospace" font-size="7" fill="#5eead4" text-anchor="middle">frame</text>
+  <text x="54" y="114" font-family="'SF Mono',monospace" font-size="6.5" fill="#5eead4" text-anchor="middle">00:12</text>
+
+  <rect x="84" y="88" width="48" height="34" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+  <text x="108" y="108" font-family="'SF Mono',monospace" font-size="6.5" fill="#475569" text-anchor="middle">01:30</text>
+
+  <rect x="138" y="88" width="48" height="34" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+  <text x="162" y="108" font-family="'SF Mono',monospace" font-size="6.5" fill="#475569" text-anchor="middle">03:45</text>
+
+  <!-- Timeline -->
+  <rect x="30" y="130" width="156" height="4" rx="2" fill="#1e293b"/>
+  <rect x="30" y="130" width="50" height="4" rx="2" fill="#5eead4" opacity="0.8"/>
+  <circle cx="80" cy="132" r="3.5" fill="#5eead4"/>
+
+  <text x="30" y="148" font-family="'SF Mono',monospace" font-size="7" fill="#475569">Keyframes extracted</text>
+  <text x="30" y="160" font-family="'SF Mono',monospace" font-size="7" fill="#475569">Transcript + OCR</text>
+  <text x="30" y="172" font-family="'SF Mono',monospace" font-size="7" fill="#475569">Visual embeddings</text>
+
+  <!-- Arrow -->
+  <line x1="202" y1="126" x2="218" y2="126" stroke="#5eead4" stroke-width="1.2" opacity="0.6"/>
+  <path d="M216 123 L222 126 L216 129" fill="#5eead4" opacity="0.6"/>
+
+  <!-- Center: AI Engine -->
+  <rect x="224" y="66" width="110" height="120" rx="8" fill="#0f172a" stroke="#6366f1" stroke-width="1"/>
+  <text x="279" y="82" font-family="'SF Mono',monospace" font-size="9" fill="#a5b4fc" text-anchor="middle" font-weight="600">AI ENGINE</text>
+
+  <rect x="234" y="90" width="90" height="18" rx="4" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.7"/>
+  <text x="279" y="103" font-family="'SF Mono',monospace" font-size="7" fill="#a5b4fc" text-anchor="middle">Multi-modal LLM</text>
+
+  <rect x="234" y="114" width="90" height="18" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.7"/>
+  <text x="279" y="127" font-family="'SF Mono',monospace" font-size="7" fill="#94a3b8" text-anchor="middle">Temporal Analysis</text>
+
+  <rect x="234" y="138" width="90" height="18" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.7"/>
+  <text x="279" y="151" font-family="'SF Mono',monospace" font-size="7" fill="#94a3b8" text-anchor="middle">Context Manager</text>
+
+  <rect x="234" y="162" width="90" height="16" rx="4" fill="#064e3b" stroke="#16a34a" stroke-width="0.7"/>
+  <text x="279" y="174" font-family="'SF Mono',monospace" font-size="7" fill="#4ade80" text-anchor="middle">Streamlit UI</text>
+
+  <!-- Arrow -->
+  <line x1="336" y1="126" x2="352" y2="126" stroke="#5eead4" stroke-width="1.2" opacity="0.6"/>
+  <path d="M350 123 L356 126 L350 129" fill="#5eead4" opacity="0.6"/>
+
+  <!-- Right: Chat interface -->
+  <rect x="358" y="66" width="102" height="120" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="409" y="82" font-family="'SF Mono',monospace" font-size="9" fill="#5eead4" text-anchor="middle" font-weight="600">CHAT</text>
+
+  <rect x="368" y="90" width="82" height="20" rx="4" fill="#1e293b"/>
+  <text x="409" y="102" font-family="'SF Mono',monospace" font-size="6.5" fill="#93c5fd" text-anchor="middle">"What at 2:30?"</text>
+
+  <rect x="368" y="116" width="82" height="28" rx="4" fill="#1e1b4b"/>
+  <text x="409" y="128" font-family="'SF Mono',monospace" font-size="6" fill="#a5b4fc" text-anchor="middle">"At 2:30, the</text>
+  <text x="409" y="138" font-family="'SF Mono',monospace" font-size="6" fill="#a5b4fc" text-anchor="middle">speaker covers..."</text>
+
+  <rect x="368" y="150" width="82" height="16" rx="4" fill="#1e293b"/>
+  <text x="409" y="161" font-family="'SF Mono',monospace" font-size="6.5" fill="#93c5fd" text-anchor="middle">"Summarize all"</text>
+
+  <!-- Typing indicator -->
+  <circle cx="382" cy="175" r="2" fill="#5eead4" opacity="0.7"/>
+  <circle cx="392" cy="175" r="2" fill="#5eead4" opacity="0.5"/>
+  <circle cx="402" cy="175" r="2" fill="#5eead4" opacity="0.3"/>
+
+  <!-- Bottom: workflow summary -->
+  <rect x="20" y="198" width="440" height="36" rx="6" fill="#0f172a" stroke="#1e293b" stroke-width="0.8"/>
+  <text x="240" y="214" font-family="'SF Mono',monospace" font-size="8" fill="#94a3b8" text-anchor="middle">Upload video → AI extracts frames, transcript, visuals → ask anything conversationally</text>
+  <text x="240" y="228" font-family="'SF Mono',monospace" font-size="7" fill="#475569" text-anchor="middle">Streamlit · Multi-modal LLM · Python · OpenCV · LangChain</text>
+
+  <!-- Bottom badge -->
+  <rect x="170" y="244" width="140" height="30" rx="6" fill="#052e16" stroke="#16a34a" stroke-width="0.8"/>
+  <text x="240" y="260" font-family="'SF Mono',monospace" font-size="9" fill="#4ade80" text-anchor="middle" font-weight="600">Multi-modal Video AI</text>
+  <text x="240" y="270" font-family="'SF Mono',monospace" font-size="7" fill="#166534" text-anchor="middle">real-time conversational</text>
+
+  <text x="30" y="286" font-family="'SF Mono',monospace" font-size="8" fill="#334155">Streamlit · Multi-modal LLM · Python · Video Analysis</text>
+</svg>

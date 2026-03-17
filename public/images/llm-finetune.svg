@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300">
+  <defs>
+    <linearGradient id="bgl" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#130f2a"/>
+    </linearGradient>
+    <linearGradient id="frozenLayer" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#1a2234"/>
+    </linearGradient>
+    <linearGradient id="loraGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <filter id="glowL">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowLsm">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrowL" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#5eead450"/>
+    </marker>
+    <marker id="arrowP" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#a78bfa80"/>
+    </marker>
+  </defs>
+
+  <rect width="480" height="300" fill="url(#bgl)" rx="8"/>
+
+  <!-- Title -->
+  <text x="240" y="26" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="11" letter-spacing="3" opacity="0.8">LoRA FINE-TUNING PIPELINE</text>
+
+  <!-- Input token -->
+  <rect x="18" y="48" width="64" height="28" rx="5" fill="#1e293b" stroke="#47556980" stroke-width="1"/>
+  <text x="50" y="63" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="8">Input</text>
+  <text x="50" y="71" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="7">tokens</text>
+
+  <!-- Arrow -->
+  <line x1="82" y1="62" x2="106" y2="62" stroke="#5eead450" stroke-width="1.5" marker-end="url(#arrowL)"/>
+
+  <!-- Model layers column -->
+  <!-- Layer 1: Embedding -->
+  <rect x="108" y="42" width="100" height="28" rx="5" fill="url(#frozenLayer)" stroke="#334155" stroke-width="1"/>
+  <text x="158" y="57" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="8">Embedding</text>
+  <text x="158" y="65" text-anchor="middle" fill="#475569" font-family="monospace" font-size="6">frozen ❄</text>
+
+  <!-- Layer 2: Attention 1 -->
+  <rect x="108" y="78" width="100" height="28" rx="5" fill="url(#frozenLayer)" stroke="#334155" stroke-width="1"/>
+  <text x="158" y="93" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="8">Attn Layer 1</text>
+  <text x="158" y="101" text-anchor="middle" fill="#475569" font-family="monospace" font-size="6">frozen ❄</text>
+
+  <!-- Layer 3: Attention 2 — with LoRA -->
+  <rect x="108" y="114" width="100" height="28" rx="5" fill="#6366f120" stroke="#6366f180" stroke-width="1.2" filter="url(#glowLsm)"/>
+  <text x="158" y="129" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="8">Attn Layer 2</text>
+  <text x="158" y="137" text-anchor="middle" fill="#a78bfa70" font-family="monospace" font-size="6">+ LoRA ✦</text>
+
+  <!-- Layer 4: FFN 1 -->
+  <rect x="108" y="150" width="100" height="28" rx="5" fill="url(#frozenLayer)" stroke="#334155" stroke-width="1"/>
+  <text x="158" y="165" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="8">FFN Layer 1</text>
+  <text x="158" y="173" text-anchor="middle" fill="#475569" font-family="monospace" font-size="6">frozen ❄</text>
+
+  <!-- Layer 5: FFN 2 — with LoRA -->
+  <rect x="108" y="186" width="100" height="28" rx="5" fill="#6366f120" stroke="#6366f180" stroke-width="1.2" filter="url(#glowLsm)"/>
+  <text x="158" y="201" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="8">FFN Layer 2</text>
+  <text x="158" y="209" text-anchor="middle" fill="#a78bfa70" font-family="monospace" font-size="6">+ LoRA ✦</text>
+
+  <!-- Layer 6: LM Head -->
+  <rect x="108" y="222" width="100" height="28" rx="5" fill="url(#frozenLayer)" stroke="#334155" stroke-width="1"/>
+  <text x="158" y="237" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="8">LM Head</text>
+  <text x="158" y="245" text-anchor="middle" fill="#475569" font-family="monospace" font-size="6">frozen ❄</text>
+
+  <!-- Vertical connector between layers -->
+  <line x1="158" y1="70" x2="158" y2="78" stroke="#33415540" stroke-width="1"/>
+  <line x1="158" y1="106" x2="158" y2="114" stroke="#6366f140" stroke-width="1.2"/>
+  <line x1="158" y1="142" x2="158" y2="150" stroke="#33415540" stroke-width="1"/>
+  <line x1="158" y1="178" x2="158" y2="186" stroke="#6366f140" stroke-width="1.2"/>
+  <line x1="158" y1="214" x2="158" y2="222" stroke="#33415540" stroke-width="1"/>
+
+  <!-- LoRA Adapter detail (right side) -->
+  <text x="300" y="40" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="10" letter-spacing="2">LoRA ADAPTER</text>
+  <text x="300" y="52" text-anchor="middle" fill="#a78bfa60" font-family="monospace" font-size="8">W = W₀ + BA  (rank r=16)</text>
+
+  <!-- W0 box (base weight) -->
+  <rect x="232" y="65" width="60" height="50" rx="5" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="262" y="85" text-anchor="middle" fill="#475569" font-family="monospace" font-size="9">W₀</text>
+  <text x="262" y="97" text-anchor="middle" fill="#334155" font-family="monospace" font-size="7">d×d</text>
+  <text x="262" y="109" text-anchor="middle" fill="#475569" font-family="monospace" font-size="6">frozen</text>
+
+  <!-- + sign -->
+  <text x="302" y="95" fill="#5eead490" font-family="monospace" font-size="16">+</text>
+
+  <!-- A matrix -->
+  <rect x="318" y="65" width="44" height="22" rx="4" fill="url(#loraGrad)" opacity="0.8" filter="url(#glowLsm)"/>
+  <text x="340" y="80" text-anchor="middle" fill="white" font-family="monospace" font-size="9" font-weight="bold">A</text>
+
+  <!-- B matrix -->
+  <rect x="318" y="93" width="44" height="22" rx="4" fill="url(#loraGrad)" opacity="0.9" filter="url(#glowLsm)"/>
+  <text x="340" y="108" text-anchor="middle" fill="white" font-family="monospace" font-size="9" font-weight="bold">B</text>
+
+  <!-- rank labels -->
+  <text x="370" y="78" fill="#a78bfa80" font-family="monospace" font-size="7">d×r</text>
+  <text x="370" y="106" fill="#a78bfa80" font-family="monospace" font-size="7">r×d</text>
+
+  <!-- Arrow from LoRA layer to adapter -->
+  <path d="M 208 128 Q 220 128 232 90" stroke="#6366f160" stroke-width="1" fill="none" stroke-dasharray="3,2" marker-end="url(#arrowP)"/>
+
+  <!-- Arrow from adapter to LoRA layer 2 -->
+  <path d="M 208 200 Q 220 200 232 106" stroke="#6366f160" stroke-width="1" fill="none" stroke-dasharray="3,2" marker-end="url(#arrowP)"/>
+
+  <!-- Trainable params stat -->
+  <rect x="228" y="130" width="220" height="55" rx="6" fill="#a78bfa10" stroke="#a78bfa30" stroke-width="1"/>
+  <text x="338" y="148" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="9" font-weight="bold">Trainable Params</text>
+  <rect x="238" y="154" width="100" height="6" rx="3" fill="#33415560"/>
+  <rect x="238" y="154" width="4" height="6" rx="3" fill="#a78bfa" filter="url(#glowLsm)"/>
+  <text x="350" y="161" fill="#a78bfa90" font-family="monospace" font-size="8">0.1% of W₀</text>
+  <text x="338" y="178" text-anchor="middle" fill="#5eead490" font-family="monospace" font-size="8">r=16 · α=32 · dropout=0.05</text>
+
+  <!-- Model label -->
+  <rect x="228" y="195" width="220" height="55" rx="6" fill="#5eead408" stroke="#5eead425" stroke-width="1"/>
+  <text x="338" y="213" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="9" font-weight="bold">Meta Llama-2 / 3</text>
+  <text x="338" y="226" text-anchor="middle" fill="#5eead470" font-family="monospace" font-size="8">HuggingFace PEFT · PyTorch</text>
+  <text x="338" y="238" text-anchor="middle" fill="#ffffff40" font-family="monospace" font-size="7">QLoRA 4-bit quantized base</text>
+  <text x="338" y="250" text-anchor="middle" fill="#ffffff30" font-family="monospace" font-size="7">GPU: A100 · batch 8 · lr 2e-4</text>
+
+  <!-- Output arrow -->
+  <line x1="208" y1="236" x2="228" y2="236" stroke="#5eead440" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Legend -->
+  <rect x="18" y="265" width="200" height="22" rx="4" fill="#5eead408"/>
+  <rect x="26" y="271" width="10" height="10" rx="2" fill="#334155"/>
+  <text x="42" y="280" fill="#64748b" font-family="monospace" font-size="7">Frozen weights</text>
+  <rect x="115" y="271" width="10" height="10" rx="2" fill="url(#loraGrad)"/>
+  <text x="131" y="280" fill="#a78bfa" font-family="monospace" font-size="7">LoRA adapters</text>
+
+  <rect width="480" height="300" fill="none" stroke="#a78bfa15" stroke-width="1" rx="8"/>
+</svg>

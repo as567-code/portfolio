@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1222"/>
+      <stop offset="100%" stop-color="#0a0e1a"/>
+    </linearGradient>
+    <linearGradient id="bar32" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
+    </linearGradient>
+    <linearGradient id="bar8" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="bar4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <filter id="g1"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="g2"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+  <rect width="480" height="300" fill="url(#bg)" rx="12"/>
+  <!-- Ambient glows -->
+  <circle cx="80" cy="60" r="80" fill="#5eead4" opacity="0.04" filter="url(#g1)"/>
+  <circle cx="400" cy="240" r="80" fill="#6366f1" opacity="0.04" filter="url(#g1)"/>
+  <!-- Title -->
+  <text x="40" y="40" font-family="'Inter',system-ui,sans-serif" font-size="11" fill="#5eead4" font-weight="600" letter-spacing="2" opacity="0.9">ADAPTIVE TERNARY QUANTIZATION</text>
+  <text x="40" y="56" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#475569">On-device LLM compression · Research paper in preparation</text>
+  <!-- FP32 -->
+  <text x="40" y="96" font-family="'SF Mono','Fira Code',monospace" font-size="11" fill="#e2e8f0" font-weight="600">FP32</text>
+  <text x="82" y="96" font-family="'SF Mono','Fira Code',monospace" font-size="9" fill="#475569">32-bit floating point</text>
+  <rect x="40" y="104" width="340" height="28" rx="6" fill="#0f1729" stroke="#1e293b" stroke-width="1"/>
+  <rect x="42" y="106" width="336" height="24" rx="5" fill="url(#bar32)" opacity="0.85"/>
+  <text x="368" y="122" font-family="'SF Mono',monospace" font-size="10" fill="#0c1222" font-weight="700" text-anchor="end">100%</text>
+  <text x="396" y="122" font-family="'SF Mono',monospace" font-size="10" fill="#334155">baseline</text>
+  <!-- Arrow -->
+  <path d="M210 136 L210 152" stroke="#334155" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <path d="M206 150 L210 157 L214 150" fill="#334155"/>
+  <!-- INT8 -->
+  <text x="40" y="174" font-family="'SF Mono','Fira Code',monospace" font-size="11" fill="#e2e8f0" font-weight="600">INT8</text>
+  <text x="82" y="174" font-family="'SF Mono','Fira Code',monospace" font-size="9" fill="#475569">8-bit integer</text>
+  <rect x="40" y="182" width="340" height="28" rx="6" fill="#0f1729" stroke="#1e293b" stroke-width="1"/>
+  <rect x="42" y="184" width="210" height="24" rx="5" fill="url(#bar8)" opacity="0.85"/>
+  <text x="244" y="200" font-family="'SF Mono',monospace" font-size="10" fill="#0c1222" font-weight="700" text-anchor="end">62%</text>
+  <rect x="274" y="186" width="56" height="20" rx="4" fill="#1e1b4b" stroke="#4338ca" stroke-width="0.8"/>
+  <text x="302" y="200" font-family="'SF Mono',monospace" font-size="9" fill="#a5b4fc" text-anchor="middle">4× ↓</text>
+  <!-- Arrow -->
+  <path d="M210 214 L210 230" stroke="#334155" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <path d="M206 228 L210 235 L214 228" fill="#334155"/>
+  <!-- INT4 / Ternary -->
+  <text x="40" y="252" font-family="'SF Mono','Fira Code',monospace" font-size="11" fill="#e2e8f0" font-weight="600">INT4</text>
+  <text x="82" y="252" font-family="'SF Mono','Fira Code',monospace" font-size="9" fill="#475569">4-bit ternary {-1, 0, +1}</text>
+  <rect x="40" y="260" width="340" height="28" rx="6" fill="#0f1729" stroke="#1e293b" stroke-width="1"/>
+  <rect x="42" y="262" width="115" height="24" rx="5" fill="url(#bar4)" opacity="0.9"/>
+  <text x="149" y="278" font-family="'SF Mono',monospace" font-size="10" fill="#0c1222" font-weight="700" text-anchor="end">34%</text>
+  <rect x="172" y="264" width="56" height="20" rx="4" fill="#451a03" stroke="#b45309" stroke-width="0.8"/>
+  <text x="200" y="278" font-family="'SF Mono',monospace" font-size="9" fill="#fbbf24" text-anchor="middle">8× ↓</text>
+  <!-- Accuracy badge -->
+  <rect x="350" y="254" width="110" height="32" rx="8" fill="#052e16" stroke="#16a34a" stroke-width="1"/>
+  <text x="405" y="270" font-family="'SF Mono',monospace" font-size="9" fill="#4ade80" text-anchor="middle">≈96% accuracy</text>
+  <text x="405" y="282" font-family="'SF Mono',monospace" font-size="8" fill="#166534" text-anchor="middle">retained</text>
+  <!-- Corner tech badges -->
+  <rect x="390" y="88" width="70" height="22" rx="5" fill="#0f1729" stroke="#1e293b" stroke-width="1"/>
+  <text x="425" y="103" font-family="'SF Mono',monospace" font-size="8" fill="#5eead4" text-anchor="middle">CUDA</text>
+  <rect x="390" y="116" width="70" height="22" rx="5" fill="#0f1729" stroke="#1e293b" stroke-width="1"/>
+  <text x="425" y="131" font-family="'SF Mono',monospace" font-size="8" fill="#818cf8" text-anchor="middle">PyTorch</text>
+</svg>

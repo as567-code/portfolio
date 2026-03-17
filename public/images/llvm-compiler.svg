@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1222"/>
+      <stop offset="100%" stop-color="#0a0e1a"/>
+    </linearGradient>
+    <linearGradient id="pipe" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5eead4" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="g1"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+  <rect width="480" height="300" fill="url(#bg)" rx="12"/>
+  <circle cx="240" cy="150" r="120" fill="#6366f1" opacity="0.03" filter="url(#g1)"/>
+
+  <!-- Title -->
+  <text x="30" y="36" font-family="'Inter',system-ui,sans-serif" font-size="11" fill="#5eead4" font-weight="600" letter-spacing="2">LLVM ML COMPILER FRAMEWORK</text>
+  <text x="30" y="52" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#475569">IR Optimization · Custom CUDA Memory Coalescing Pass</text>
+
+  <!-- Pipeline: Source → Frontend → IR → Passes → Backend -->
+  <rect x="20" y="68" width="68" height="38" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="54" y="84" font-family="'SF Mono',monospace" font-size="7.5" fill="#94a3b8" text-anchor="middle">Source</text>
+  <text x="54" y="96" font-family="'SF Mono',monospace" font-size="8" fill="#e2e8f0" text-anchor="middle" font-weight="600">C / C++</text>
+
+  <line x1="90" y1="87" x2="106" y2="87" stroke="url(#pipe)" stroke-width="1.2"/>
+  <path d="M104 84 L110 87 L104 90" fill="#5eead4" opacity="0.6"/>
+
+  <rect x="112" y="68" width="68" height="38" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="146" y="84" font-family="'SF Mono',monospace" font-size="7.5" fill="#94a3b8" text-anchor="middle">Frontend</text>
+  <text x="146" y="96" font-family="'SF Mono',monospace" font-size="8" fill="#e2e8f0" text-anchor="middle" font-weight="600">Clang</text>
+
+  <line x1="182" y1="87" x2="198" y2="87" stroke="url(#pipe)" stroke-width="1.2"/>
+  <path d="M196 84 L202 87 L196 90" fill="#5eead4" opacity="0.6"/>
+
+  <rect x="204" y="68" width="68" height="38" rx="6" fill="#0f172a" stroke="#5eead4" stroke-width="1.2"/>
+  <text x="238" y="84" font-family="'SF Mono',monospace" font-size="7.5" fill="#5eead4" text-anchor="middle">LLVM IR</text>
+  <text x="238" y="96" font-family="'SF Mono',monospace" font-size="8" fill="#5eead4" text-anchor="middle" font-weight="600">SSA Form</text>
+
+  <line x1="274" y1="87" x2="290" y2="87" stroke="url(#pipe)" stroke-width="1.2"/>
+  <path d="M288 84 L294 87 L288 90" fill="#6366f1" opacity="0.6"/>
+
+  <rect x="296" y="68" width="68" height="38" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.2"/>
+  <text x="330" y="84" font-family="'SF Mono',monospace" font-size="7.5" fill="#a5b4fc" text-anchor="middle">Pass Mgr</text>
+  <text x="330" y="96" font-family="'SF Mono',monospace" font-size="8" fill="#a5b4fc" text-anchor="middle" font-weight="600">Optimize</text>
+
+  <line x1="366" y1="87" x2="382" y2="87" stroke="url(#pipe)" stroke-width="1.2"/>
+  <path d="M380 84 L386 87 L380 90" fill="#6366f1" opacity="0.6"/>
+
+  <rect x="388" y="68" width="72" height="38" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="424" y="84" font-family="'SF Mono',monospace" font-size="7.5" fill="#94a3b8" text-anchor="middle">Backend</text>
+  <text x="424" y="96" font-family="'SF Mono',monospace" font-size="8" fill="#e2e8f0" text-anchor="middle" font-weight="600">PTX / x86</text>
+
+  <!-- Custom Pass Detail -->
+  <rect x="20" y="118" width="440" height="110" rx="8" fill="#0f172a" stroke="#6366f1" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <text x="34" y="138" font-family="'SF Mono',monospace" font-size="9" fill="#a5b4fc" font-weight="600">Custom Pass: Memory Coalescing Optimizer</text>
+
+  <!-- Analysis -->
+  <rect x="34" y="148" width="126" height="68" rx="6" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+  <text x="97" y="164" font-family="'SF Mono',monospace" font-size="8" fill="#94a3b8" text-anchor="middle" font-weight="600">Analysis</text>
+  <text x="42" y="178" font-family="'SF Mono',monospace" font-size="7" fill="#64748b">mem access patterns</text>
+  <text x="42" y="190" font-family="'SF Mono',monospace" font-size="7" fill="#64748b">stride detection</text>
+  <text x="42" y="202" font-family="'SF Mono',monospace" font-size="7" fill="#64748b">bank conflict scan</text>
+
+  <line x1="162" y1="182" x2="178" y2="182" stroke="#5eead4" stroke-width="1" opacity="0.6"/>
+  <path d="M176 179 L182 182 L176 185" fill="#5eead4" opacity="0.6"/>
+
+  <!-- Transform -->
+  <rect x="184" y="148" width="126" height="68" rx="6" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+  <text x="247" y="164" font-family="'SF Mono',monospace" font-size="8" fill="#94a3b8" text-anchor="middle" font-weight="600">Transform</text>
+  <text x="192" y="178" font-family="'SF Mono',monospace" font-size="7" fill="#64748b">reorder loads/stores</text>
+  <text x="192" y="190" font-family="'SF Mono',monospace" font-size="7" fill="#64748b">vectorize accesses</text>
+  <text x="192" y="202" font-family="'SF Mono',monospace" font-size="7" fill="#64748b">align to 128B</text>
+
+  <line x1="312" y1="182" x2="328" y2="182" stroke="#5eead4" stroke-width="1" opacity="0.6"/>
+  <path d="M326 179 L332 182 L326 185" fill="#5eead4" opacity="0.6"/>
+
+  <!-- Result -->
+  <rect x="334" y="148" width="116" height="68" rx="6" fill="#052e16" stroke="#16a34a" stroke-width="0.8"/>
+  <text x="392" y="164" font-family="'SF Mono',monospace" font-size="8" fill="#4ade80" text-anchor="middle" font-weight="600">Result</text>
+  <text x="342" y="178" font-family="'SF Mono',monospace" font-size="7" fill="#4ade80">coalesced GPU mem</text>
+  <text x="342" y="190" font-family="'SF Mono',monospace" font-size="7" fill="#4ade80">reduced global txns</text>
+  <text x="342" y="202" font-family="'SF Mono',monospace" font-size="7" fill="#4ade80">higher bandwidth</text>
+
+  <!-- Before / After visualization -->
+  <text x="30" y="248" font-family="'SF Mono',monospace" font-size="8" fill="#475569">before:</text>
+  <rect x="76" y="240" width="7" height="7" fill="#ef4444" opacity="0.7"/>
+  <rect x="85" y="240" width="7" height="7" fill="#ef4444" opacity="0.7"/>
+  <rect x="94" y="240" width="7" height="7" fill="#334155" opacity="0.4"/>
+  <rect x="103" y="240" width="7" height="7" fill="#ef4444" opacity="0.7"/>
+  <rect x="112" y="240" width="7" height="7" fill="#334155" opacity="0.4"/>
+  <text x="126" y="248" font-family="'SF Mono',monospace" font-size="7" fill="#64748b">scattered</text>
+
+  <text x="200" y="248" font-family="'SF Mono',monospace" font-size="8" fill="#475569">after:</text>
+  <rect x="238" y="240" width="7" height="7" fill="#5eead4" opacity="0.9"/>
+  <rect x="247" y="240" width="7" height="7" fill="#5eead4" opacity="0.9"/>
+  <rect x="256" y="240" width="7" height="7" fill="#5eead4" opacity="0.9"/>
+  <rect x="265" y="240" width="7" height="7" fill="#5eead4" opacity="0.9"/>
+  <rect x="274" y="240" width="7" height="7" fill="#5eead4" opacity="0.9"/>
+  <text x="288" y="248" font-family="'SF Mono',monospace" font-size="7" fill="#5eead4">coalesced</text>
+
+  <text x="30" y="286" font-family="'SF Mono',monospace" font-size="8" fill="#334155">LLVM · C++ · IR Optimization · CUDA Memory Coalescing Pass</text>
+</svg>

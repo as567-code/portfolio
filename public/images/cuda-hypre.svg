@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1222"/>
+      <stop offset="100%" stop-color="#0a0e1a"/>
+    </linearGradient>
+    <linearGradient id="gpu" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="g1"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+  <rect width="480" height="300" fill="url(#bg)" rx="12"/>
+  <circle cx="240" cy="150" r="120" fill="#5eead4" opacity="0.03" filter="url(#g1)"/>
+  <text x="40" y="36" font-family="'Inter',system-ui,sans-serif" font-size="11" fill="#5eead4" font-weight="600" letter-spacing="2">CUDA-ACCELERATED HYPRE</text>
+  <text x="40" y="52" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#475569">Princeton Research Computing · Parallel solvers for ParFlow</text>
+  <rect x="24" y="72" width="130" height="130" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.2"/>
+  <text x="89" y="93" font-family="'SF Mono',monospace" font-size="10" fill="#94a3b8" text-anchor="middle" font-weight="600">CPU HOST</text>
+  <rect x="38" y="102" width="102" height="30" rx="6" fill="#1e293b"/>
+  <text x="89" y="121" font-family="'SF Mono',monospace" font-size="8" fill="#64748b" text-anchor="middle">Matrix Assembly</text>
+  <rect x="38" y="140" width="102" height="30" rx="6" fill="#1e293b"/>
+  <text x="89" y="159" font-family="'SF Mono',monospace" font-size="8" fill="#64748b" text-anchor="middle">RHS Setup</text>
+  <rect x="38" y="178" width="102" height="16" rx="4" fill="#1e293b"/>
+  <text x="89" y="190" font-family="'SF Mono',monospace" font-size="7" fill="#475569" text-anchor="middle">PCIe Transfer</text>
+  <line x1="158" y1="137" x2="182" y2="137" stroke="#5eead4" stroke-width="1.5" opacity="0.6"/>
+  <path d="M180 133 L187 137 L180 141" fill="#5eead4" opacity="0.6"/>
+  <rect x="190" y="72" width="270" height="200" rx="10" fill="url(#gpu)" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="325" y="93" font-family="'SF Mono',monospace" font-size="10" fill="#60a5fa" text-anchor="middle" font-weight="600">CUDA DEVICE</text>
+  <g transform="translate(204, 102)">
+    <rect width="56" height="36" rx="5" fill="#172554" stroke="#1d4ed8" stroke-width="0.8"/>
+    <text x="28" y="18" font-family="'SF Mono',monospace" font-size="8" fill="#60a5fa" text-anchor="middle">SM 0</text>
+    <text x="28" y="30" font-family="'SF Mono',monospace" font-size="7" fill="#1d4ed8" text-anchor="middle">256 cores</text>
+  </g>
+  <g transform="translate(266, 102)">
+    <rect width="56" height="36" rx="5" fill="#172554" stroke="#1d4ed8" stroke-width="0.8"/>
+    <text x="28" y="18" font-family="'SF Mono',monospace" font-size="8" fill="#60a5fa" text-anchor="middle">SM 1</text>
+    <text x="28" y="30" font-family="'SF Mono',monospace" font-size="7" fill="#1d4ed8" text-anchor="middle">256 cores</text>
+  </g>
+  <g transform="translate(328, 102)">
+    <rect width="56" height="36" rx="5" fill="#172554" stroke="#1d4ed8" stroke-width="0.8"/>
+    <text x="28" y="18" font-family="'SF Mono',monospace" font-size="8" fill="#60a5fa" text-anchor="middle">SM 2</text>
+    <text x="28" y="30" font-family="'SF Mono',monospace" font-size="7" fill="#1d4ed8" text-anchor="middle">256 cores</text>
+  </g>
+  <g transform="translate(390, 102)">
+    <rect width="56" height="36" rx="5" fill="#172554" stroke="#1d4ed8" stroke-width="0.8"/>
+    <text x="28" y="18" font-family="'SF Mono',monospace" font-size="8" fill="#60a5fa" text-anchor="middle">SM N</text>
+    <text x="28" y="30" font-family="'SF Mono',monospace" font-size="7" fill="#1d4ed8" text-anchor="middle">256 cores</text>
+  </g>
+  <rect x="204" y="146" width="242" height="20" rx="5" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+  <text x="325" y="160" font-family="'SF Mono',monospace" font-size="8" fill="#475569" text-anchor="middle">Shared Memory · L2 Cache · Global Memory</text>
+  <rect x="204" y="176" width="74" height="32" rx="6" fill="#172554" stroke="#3b82f6" stroke-width="0.8"/>
+  <text x="241" y="190" font-family="'SF Mono',monospace" font-size="7.5" fill="#93c5fd" text-anchor="middle">SpMV</text>
+  <text x="241" y="201" font-family="'SF Mono',monospace" font-size="6.5" fill="#3b82f6" text-anchor="middle">kernel</text>
+  <line x1="280" y1="192" x2="292" y2="192" stroke="#5eead4" stroke-width="1"/>
+  <path d="M290 189 L295 192 L290 195" fill="#5eead4"/>
+  <rect x="296" y="176" width="74" height="32" rx="6" fill="#172554" stroke="#3b82f6" stroke-width="0.8"/>
+  <text x="333" y="190" font-family="'SF Mono',monospace" font-size="7.5" fill="#93c5fd" text-anchor="middle">Precond</text>
+  <text x="333" y="201" font-family="'SF Mono',monospace" font-size="6.5" fill="#3b82f6" text-anchor="middle">AMG</text>
+  <line x1="372" y1="192" x2="384" y2="192" stroke="#5eead4" stroke-width="1"/>
+  <path d="M382 189 L387 192 L382 195" fill="#5eead4"/>
+  <rect x="388" y="176" width="62" height="32" rx="6" fill="#172554" stroke="#3b82f6" stroke-width="0.8"/>
+  <text x="419" y="190" font-family="'SF Mono',monospace" font-size="7.5" fill="#93c5fd" text-anchor="middle">Solve</text>
+  <text x="419" y="201" font-family="'SF Mono',monospace" font-size="6.5" fill="#3b82f6" text-anchor="middle">CG/GMRES</text>
+  <rect x="204" y="218" width="242" height="44" rx="6" fill="#052e16" stroke="#16a34a" stroke-width="0.8"/>
+  <text x="325" y="238" font-family="'SF Mono',monospace" font-size="11" fill="#4ade80" text-anchor="middle" font-weight="700">3× GPU Speedup</text>
+  <text x="325" y="254" font-family="'SF Mono',monospace" font-size="8" fill="#166534" text-anchor="middle">67% reduction in solver time · ParFlow integration</text>
+  <text x="40" y="284" font-family="'SF Mono',monospace" font-size="8" fill="#334155">CUDA C · Parallel Solvers · HPC · Princeton RSE</text>
+</svg>

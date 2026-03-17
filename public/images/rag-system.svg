@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1222"/>
+      <stop offset="100%" stop-color="#0a0e1a"/>
+    </linearGradient>
+    <filter id="g1"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+  <rect width="480" height="300" fill="url(#bg)" rx="12"/>
+  <circle cx="240" cy="140" r="100" fill="#6366f1" opacity="0.03" filter="url(#g1)"/>
+  <text x="40" y="36" font-family="'Inter',system-ui,sans-serif" font-size="11" fill="#5eead4" font-weight="600" letter-spacing="2">MULTI-AGENT RAG SYSTEM</text>
+  <text x="40" y="52" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#475569">LangChain · Multi-agent orchestration · 92% retrieval accuracy</text>
+  <rect x="30" y="68" width="120" height="36" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="90" y="84" font-family="'SF Mono',monospace" font-size="8" fill="#94a3b8" text-anchor="middle">User Query</text>
+  <text x="90" y="96" font-family="'SF Mono',monospace" font-size="7" fill="#475569" text-anchor="middle">"How does X work?"</text>
+  <line x1="152" y1="86" x2="174" y2="86" stroke="#5eead4" stroke-width="1.2" opacity="0.6"/>
+  <path d="M172 83 L178 86 L172 89" fill="#5eead4" opacity="0.6"/>
+  <rect x="180" y="66" width="120" height="40" rx="8" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.2"/>
+  <text x="240" y="83" font-family="'SF Mono',monospace" font-size="9" fill="#a5b4fc" text-anchor="middle" font-weight="600">Orchestrator</text>
+  <text x="240" y="98" font-family="'SF Mono',monospace" font-size="7" fill="#6366f1" text-anchor="middle">Agent Router</text>
+  <line x1="210" y1="106" x2="90" y2="136" stroke="#5eead4" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
+  <line x1="240" y1="106" x2="240" y2="136" stroke="#5eead4" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
+  <line x1="270" y1="106" x2="390" y2="136" stroke="#5eead4" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
+  <rect x="24" y="136" width="130" height="54" rx="8" fill="#0f172a" stroke="#5eead4" stroke-width="1"/>
+  <rect x="34" y="142" width="14" height="14" rx="3" fill="#064e3b"/>
+  <text x="41" y="153" font-family="'SF Mono',monospace" font-size="8" fill="#5eead4" text-anchor="middle">R</text>
+  <text x="56" y="153" font-family="'SF Mono',monospace" font-size="9" fill="#5eead4" font-weight="600">Retrieval</text>
+  <text x="34" y="168" font-family="'SF Mono',monospace" font-size="7" fill="#475569">Vector DB search</text>
+  <text x="34" y="180" font-family="'SF Mono',monospace" font-size="7" fill="#475569">Embedding match</text>
+  <rect x="175" y="136" width="130" height="54" rx="8" fill="#0f172a" stroke="#818cf8" stroke-width="1"/>
+  <rect x="185" y="142" width="14" height="14" rx="3" fill="#1e1b4b"/>
+  <text x="192" y="153" font-family="'SF Mono',monospace" font-size="8" fill="#a5b4fc" text-anchor="middle">S</text>
+  <text x="207" y="153" font-family="'SF Mono',monospace" font-size="9" fill="#a5b4fc" font-weight="600">Summarizer</text>
+  <text x="185" y="168" font-family="'SF Mono',monospace" font-size="7" fill="#475569">Chunk analysis</text>
+  <text x="185" y="180" font-family="'SF Mono',monospace" font-size="7" fill="#475569">Context fusion</text>
+  <rect x="326" y="136" width="130" height="54" rx="8" fill="#0f172a" stroke="#f59e0b" stroke-width="1"/>
+  <rect x="336" y="142" width="14" height="14" rx="3" fill="#451a03"/>
+  <text x="343" y="153" font-family="'SF Mono',monospace" font-size="8" fill="#fbbf24" text-anchor="middle">V</text>
+  <text x="358" y="153" font-family="'SF Mono',monospace" font-size="9" fill="#fbbf24" font-weight="600">Validator</text>
+  <text x="336" y="168" font-family="'SF Mono',monospace" font-size="7" fill="#475569">Fact-checking</text>
+  <text x="336" y="180" font-family="'SF Mono',monospace" font-size="7" fill="#475569">Hallucination guard</text>
+  <line x1="90" y1="190" x2="210" y2="216" stroke="#5eead4" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
+  <line x1="240" y1="190" x2="240" y2="216" stroke="#5eead4" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
+  <line x1="390" y1="190" x2="270" y2="216" stroke="#5eead4" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
+  <rect x="170" y="216" width="140" height="36" rx="8" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.2"/>
+  <text x="240" y="233" font-family="'SF Mono',monospace" font-size="9" fill="#a5b4fc" text-anchor="middle" font-weight="600">LLM Generator</text>
+  <text x="240" y="246" font-family="'SF Mono',monospace" font-size="7" fill="#6366f1" text-anchor="middle">Context-aware synthesis</text>
+  <line x1="312" y1="234" x2="338" y2="234" stroke="#5eead4" stroke-width="1.2" opacity="0.6"/>
+  <path d="M336 231 L342 234 L336 237" fill="#5eead4" opacity="0.6"/>
+  <rect x="344" y="216" width="112" height="36" rx="8" fill="#052e16" stroke="#16a34a" stroke-width="1"/>
+  <text x="400" y="233" font-family="'SF Mono',monospace" font-size="9" fill="#4ade80" text-anchor="middle" font-weight="600">Response</text>
+  <text x="400" y="246" font-family="'SF Mono',monospace" font-size="7" fill="#166534" text-anchor="middle">Verified answer</text>
+  <rect x="30" y="258" width="90" height="26" rx="6" fill="#052e16" stroke="#16a34a" stroke-width="0.8"/>
+  <text x="75" y="275" font-family="'SF Mono',monospace" font-size="10" fill="#4ade80" text-anchor="middle" font-weight="700">92%</text>
+  <text x="130" y="275" font-family="'SF Mono',monospace" font-size="8" fill="#475569">retrieval accuracy</text>
+  <text x="300" y="275" font-family="'SF Mono',monospace" font-size="8" fill="#334155">LangChain · Multi-Agent · RAG</text>
+</svg>

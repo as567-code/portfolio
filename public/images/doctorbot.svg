@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1222"/>
+      <stop offset="100%" stop-color="#050510"/>
+    </linearGradient>
+    <radialGradient id="tardis-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0c1222" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="g1"><feGaussianBlur stdDeviation="4"/></filter>
+    <filter id="g2"><feGaussianBlur stdDeviation="1.5"/></filter>
+  </defs>
+  <rect width="480" height="300" fill="url(#bg)" rx="12"/>
+
+  <!-- Stars -->
+  <circle cx="20" cy="20" r="0.8" fill="white" opacity="0.5"/>
+  <circle cx="60" cy="50" r="0.6" fill="white" opacity="0.4"/>
+  <circle cx="440" cy="30" r="0.8" fill="white" opacity="0.5"/>
+  <circle cx="460" cy="80" r="0.6" fill="white" opacity="0.3"/>
+  <circle cx="10" cy="200" r="0.8" fill="white" opacity="0.4"/>
+  <circle cx="470" cy="250" r="0.6" fill="white" opacity="0.5"/>
+
+  <!-- Title -->
+  <text x="30" y="36" font-family="'Inter',system-ui,sans-serif" font-size="11" fill="#5eead4" font-weight="600" letter-spacing="2">DOCTORBOT-AI</text>
+  <text x="30" y="52" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#475569">Doctor Who Themed AI Chatbot · Mistral AI · TypeScript</text>
+
+  <!-- Left: TARDIS -->
+  <ellipse cx="130" cy="160" rx="100" ry="110" fill="url(#tardis-glow)"/>
+
+  <rect x="70" y="60" width="120" height="180" rx="4" fill="#1e3a8a" stroke="#3b82f6" stroke-width="1.2"/>
+
+  <!-- Windows -->
+  <rect x="78" y="68" width="48" height="30" rx="2" fill="#1e40af"/>
+  <line x1="102" y1="68" x2="102" y2="98" stroke="#3b82f6" stroke-width="0.6"/>
+  <line x1="78" y1="83" x2="126" y2="83" stroke="#3b82f6" stroke-width="0.6"/>
+  <rect x="78" y="68" width="48" height="30" rx="2" fill="#93c5fd" opacity="0.06"/>
+
+  <rect x="134" y="68" width="48" height="30" rx="2" fill="#1e40af"/>
+  <line x1="158" y1="68" x2="158" y2="98" stroke="#3b82f6" stroke-width="0.6"/>
+  <line x1="134" y1="83" x2="182" y2="83" stroke="#3b82f6" stroke-width="0.6"/>
+  <rect x="134" y="68" width="48" height="30" rx="2" fill="#93c5fd" opacity="0.06"/>
+
+  <!-- Sign -->
+  <rect x="78" y="104" width="104" height="14" rx="2" fill="#1e40af"/>
+  <text x="130" y="114" font-family="'SF Mono',monospace" font-size="7.5" fill="#93c5fd" text-anchor="middle" font-weight="700">POLICE BOX</text>
+
+  <!-- Door panels -->
+  <rect x="78" y="124" width="48" height="90" rx="2" fill="#1e40af" stroke="#3b82f6" stroke-width="0.6"/>
+  <rect x="134" y="124" width="48" height="90" rx="2" fill="#1e40af" stroke="#3b82f6" stroke-width="0.6"/>
+  <rect x="84" y="130" width="16" height="22" rx="1" fill="#1d4ed8"/>
+  <rect x="106" y="130" width="16" height="22" rx="1" fill="#1d4ed8"/>
+  <rect x="84" y="158" width="16" height="22" rx="1" fill="#1d4ed8"/>
+  <rect x="106" y="158" width="16" height="22" rx="1" fill="#1d4ed8"/>
+  <rect x="140" y="130" width="16" height="22" rx="1" fill="#1d4ed8"/>
+  <rect x="162" y="130" width="16" height="22" rx="1" fill="#1d4ed8"/>
+  <rect x="140" y="158" width="16" height="22" rx="1" fill="#1d4ed8"/>
+  <rect x="162" y="158" width="16" height="22" rx="1" fill="#1d4ed8"/>
+
+  <!-- Door handles -->
+  <circle cx="130" cy="170" r="2.5" fill="#60a5fa"/>
+  <circle cx="134" cy="170" r="2.5" fill="#60a5fa"/>
+
+  <!-- Lantern -->
+  <rect x="122" y="48" width="16" height="14" rx="2" fill="#fbbf24" opacity="0.8" filter="url(#g1)"/>
+  <rect x="125" y="42" width="10" height="8" rx="1" fill="#1e40af"/>
+  <circle cx="130" cy="55" r="6" fill="#fbbf24" opacity="0.25" filter="url(#g1)"/>
+
+  <!-- Right: Chat interface -->
+  <rect x="230" y="56" width="230" height="200" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Header -->
+  <rect x="230" y="56" width="230" height="30" rx="8" fill="#1e3a8a"/>
+  <rect x="230" y="74" width="230" height="12" fill="#1e3a8a"/>
+  <circle cx="248" cy="72" r="5" fill="#fbbf24" opacity="0.8" filter="url(#g2)"/>
+  <text x="260" y="76" font-family="'SF Mono',monospace" font-size="9" fill="#93c5fd" font-weight="600">DoctorBot-AI</text>
+
+  <!-- Mistral badge -->
+  <rect x="396" y="62" width="54" height="12" rx="3" fill="#7c3aed" opacity="0.8"/>
+  <text x="423" y="71" font-family="'SF Mono',monospace" font-size="6.5" fill="white" text-anchor="middle">Mistral AI</text>
+
+  <text x="260" y="86" font-family="'SF Mono',monospace" font-size="6.5" fill="#3b82f6">TARDIS Console UI</text>
+
+  <!-- User msg 1 -->
+  <rect x="320" y="96" width="130" height="18" rx="4" fill="#1e293b"/>
+  <text x="330" y="108" font-family="'SF Mono',monospace" font-size="6.5" fill="#93c5fd">"Who are you?"</text>
+
+  <!-- Bot reply 1 -->
+  <rect x="244" y="120" width="170" height="30" rx="4" fill="#1e1b4b"/>
+  <text x="254" y="132" font-family="'SF Mono',monospace" font-size="6.5" fill="#a5b4fc">"I am the Doctor. Nine</text>
+  <text x="254" y="142" font-family="'SF Mono',monospace" font-size="6.5" fill="#a5b4fc">hundred years of time..."</text>
+
+  <!-- User msg 2 -->
+  <rect x="300" y="158" width="150" height="16" rx="4" fill="#1e293b"/>
+  <text x="310" y="170" font-family="'SF Mono',monospace" font-size="6.5" fill="#93c5fd">"Where is the TARDIS?"</text>
+
+  <!-- Bot reply 2 -->
+  <rect x="244" y="180" width="180" height="30" rx="4" fill="#1e1b4b"/>
+  <text x="254" y="192" font-family="'SF Mono',monospace" font-size="6.5" fill="#a5b4fc">"She is right here, bigger</text>
+  <text x="254" y="202" font-family="'SF Mono',monospace" font-size="6.5" fill="#a5b4fc">on the inside."</text>
+
+  <!-- Input bar -->
+  <rect x="244" y="218" width="206" height="20" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.6"/>
+  <text x="254" y="231" font-family="'SF Mono',monospace" font-size="7" fill="#475569">Ask the Doctor...</text>
+  <rect x="438" y="220" width="8" height="16" rx="2" fill="#3b82f6" opacity="0.7"/>
+
+  <!-- Tech badges -->
+  <rect x="244" y="244" width="50" height="12" rx="3" fill="#1e293b"/>
+  <text x="269" y="253" font-family="'SF Mono',monospace" font-size="6.5" fill="#60a5fa" text-anchor="middle">TypeScript</text>
+  <rect x="300" y="244" width="50" height="12" rx="3" fill="#7c3aed" opacity="0.5"/>
+  <text x="325" y="253" font-family="'SF Mono',monospace" font-size="6.5" fill="#c4b5fd" text-anchor="middle">Mistral AI</text>
+  <rect x="356" y="244" width="56" height="12" rx="3" fill="#1e293b"/>
+  <text x="384" y="253" font-family="'SF Mono',monospace" font-size="6.5" fill="#60a5fa" text-anchor="middle">TARDIS UI</text>
+
+  <text x="30" y="286" font-family="'SF Mono',monospace" font-size="8" fill="#334155">Mistral AI · TypeScript · TARDIS Console UI · Real-Time Chat</text>
+</svg>
